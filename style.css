@@ -1,0 +1,170 @@
+:root{
+  --sidebar-width: 320px;
+  --white: #ffffff;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Optima, sans-serif;
+  color: var(--white);
+  overflow: hidden;
+}
+
+.background {
+  position: fixed;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.05);
+  filter: blur(22px) saturate(1.05);
+  z-index: -2;
+  transition: background-image 700ms ease-in-out;
+}
+
+.app-container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: var(--sidebar-width);
+  padding: 18px;
+  background: rgba(0,0,0,0.18);
+  border-right: 1px solid rgba(255,255,255,0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 2;
+}
+
+.sidebar h2 { margin: 0; font-size: 1.15rem; }
+
+.playlist {
+  list-style: none;
+  padding: 8px 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow: auto;
+  flex: 1;
+}
+
+.playlist li {
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 8px;
+  cursor: grab;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  position: relative; /* Fix for drag-and-drop disappearing bug */
+  transition: background-color 0.2s, opacity 0.2s; /* Smooth visual feedback */
+}
+
+.playlist li.dragging {
+  opacity: 0.1;
+  cursor: grabbing;
+}
+
+.playlist li.active {
+  background: rgba(255,255,255,0.06);
+}
+
+.playlist li .thumb {
+  width: 44px;
+  height: 44px;
+  border-radius: 6px;
+  background-size: cover;
+  background-position: center;
+  flex-shrink: 0;
+}
+
+.playlist li .meta {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.playlist li .meta .n {
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.playlist li .meta .a { font-size: 0.9rem; opacity: 0.85; }
+
+.delete-btn {
+  position: relative;
+  width: 13px;
+  height: 13px;
+  margin-left: auto;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.delete-btn:hover {
+  opacity: 1;
+}
+
+.delete-btn::before,
+.delete-btn::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 13px;                   
+  height: 2px;                      /* This controls the thickness */
+  background-color: rgb(164, 33, 33); 
+}
+
+.delete-btn::before {
+  /* Rotate the first line */
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.delete-btn::after {
+  /* Rotate the second line */
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.player {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 30px;
+  z-index: 2;
+}
+
+.track-art {
+  width: 260px;
+  height: 260px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+  margin: 12px 0;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+}
+.track-name { font-size: 2.5rem; font-weight: 530; text-align: center; font-family: 'Optima', sans-serif;}
+.track-artist { font-size: 1.2rem; opacity: 0.85; text-align: center; margin-bottom: 6px; }
+
+.buttons { display: flex; align-items: center; gap: 18px; margin-top: 4px; }
+.control { background: transparent; border: none; color: var(--white); font-size: 1.6rem; cursor: pointer; padding: 12px; }
+.control:hover { transform: scale(1.1); }
+.control.play i { font-size: 2.8rem; }
+
+.slider_container { display: flex; align-items: center; gap: 10px; width: 75%; max-width: 540px; margin-top: 10px; }
+.current-time, .total-duration { width: 52px; text-align: center; font-size: 0.95rem; }
+.seek_slider, .volume_slider { -webkit-appearance: none; appearance: none; height: 6px; background: rgba(255,255,255,0.12); border-radius: 6px; outline: none; flex: 1; }
+.seek_slider::-webkit-slider-thumb, .volume_slider::-webkit-slider-thumb { -webkit-appearance:none; appearance:none; width:14px; height:14px; border-radius:50%; background:#fff; cursor: pointer; }
+.volume-row { max-width: 200px; }

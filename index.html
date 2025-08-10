@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Musixhub</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="background"></div>
+
+  <div class="app-container">
+    <aside class="sidebar">
+      <h2>Your Playlist</h2>
+
+      <div class="add-row">
+        <select id="availableSelect"></select>
+        <button id="addBtn" class="btn">Add</button>
+      </div>
+
+      <ul id="playlist" class="playlist"></ul>
+    </aside>
+
+    <main class="player">
+      <div id="trackArt" class="track-art"></div>
+      <div id="trackName" class="track-name">Track Name</div>
+      <div id="trackArtist" class="track-artist">Track Artist</div>
+
+      <div class="slider_container">
+        <div class="current-time" id="currentTime">00:00</div>
+        <input id="seekSlider" class="seek_slider" type="range" min="0" max="100" value="0">
+        <div class="total-duration" id="totalDuration">00:00</div>
+      </div>
+
+      <div class="buttons">
+        <button id="prevBtn" class="control"><i class="fas fa-step-backward"></i></button>
+        <button id="playPauseBtn" class="control play"><i class="fas fa-play-circle"></i></button>
+        <button id="nextBtn" class="control"><i class="fas fa-step-forward"></i></button>
+      </div>
+
+      <div class="slider_container volume-row">
+        <i class="fas fa-volume-down"></i>
+        <input id="volumeSlider" class="volume_slider" type="range" min="0" max="100" value="80">
+        <i class="fas fa-volume-up"></i>
+      </div>
+    </main>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
