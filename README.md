@@ -3,24 +3,24 @@ A modern, interactive web-based music player built with vanilla HTML, CSS, and J
 
 Here’s a list of the key features we built, which you can use to describe the project:
 
-Dynamic UI: The application background blurs and syncs with the album art of the currently playing song.
+• Dynamic UI: The application background blurs and syncs with the album art of the currently playing song.
 
-Full Playback Control: Standard play, pause, next, and previous track buttons.
+• Full Playback Control: Standard play, pause, next, and previous track buttons.
 
-Interactive Playlist Management:
+• Interactive Playlist Management:
 
-Add songs to the playlist from a master library using a dropdown menu.
+• Add songs to the playlist from a master library using a dropdown menu.
 
-Delete songs from the active playlist.
+• Delete songs from the active playlist.
 
-Reorder songs seamlessly with a drag-and-drop interface.
+• Reorder songs seamlessly with a drag-and-drop interface.
 
-Keyboard Shortcuts:
+• Keyboard Shortcuts:
 
-Spacebar: Play/Pause
+   - Spacebar: Play/Pause
 
-Right Arrow: Seek forward 10 seconds
+   - Right Arrow: Seek forward 10 seconds
 
-Left Arrow: Seek backward 10 seconds
+   - Left Arrow: Seek backward 10 seconds
 
-Visual Feedback: The currently playing song is highlighted in the playlist, and visual cues indicate when an item is being dragged.
+• Visual Feedback: The currently playing song is highlighted in the playlist, and visual cues indicate when an item is being dragged.
