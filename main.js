@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: "Counting Stars", artist: "OneRepublic", path: "counting stars.mp3", artwork: "Native.jpg" },
         { name: "Just Keep Watching", artist: "Tate McRae", path: "F1 jkw.mp3", artwork: "F1.jpg" },
         { name: "good 4 u", artist: "Olivia Rodrigo", path: "good4u.mp3", artwork: "SOUR.jpg" },
-        { name: "Anti-Hero", artist: "Taylor Swift", path: "Anti-Hero.mp3", artwork: "Midnights.jpg" },
+        { name: "Anti-Hero", artist: "Taylor Swift", path: "anti-hero.mp3", artwork: "Midnights.jpg" },
         { name: "Last Christmas - Single", artist: "WHAM!", path: "lastchristmas.mp3", artwork: "lastchristmas.jpg" },
         { name: "Risk", artist: "Gracie Abrams", path: "risk.mp3", artwork: "tsou.jpg" },
         { name: "drivers license", artist: "Olivia Rodrigo", path: "drivers license.mp3", artwork: "SOUR.jpg" },
